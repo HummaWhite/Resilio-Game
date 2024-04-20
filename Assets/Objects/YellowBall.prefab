@@ -216,9 +216,9 @@ GameObject:
   - component: {fileID: 8974578990838949948}
   - component: {fileID: 7921733389120853533}
   - component: {fileID: 5410631469584142257}
-  - component: {fileID: -611198970942847281}
+  - component: {fileID: -481984270660776350}
   m_Layer: 0
-  m_Name: BlueBall
+  m_Name: YellowBall
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cfa623178afd28242ba4d7302a450736, type: 2}
+  - {fileID: 2100000, guid: 09dd5fdc153b4764582b04721960bba4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -611198970942847281}
+      - m_Target: {fileID: -481984270660776350}
         m_TargetAssemblyTypeName: Ball, Assembly-CSharp
         m_MethodName: OnPickup
         m_Mode: 1
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -611198970942847281}
+      - m_Target: {fileID: -481984270660776350}
         m_TargetAssemblyTypeName: Ball, Assembly-CSharp
         m_MethodName: OnThrow
         m_Mode: 1
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
---- !u!114 &-611198970942847281
+--- !u!114 &-481984270660776350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6030418453511761892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6e9319441812e74c8d2c5e11aa689eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 490928073e606c446bc0cbbcda8c00f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxBounceCount: 2

@@ -46,6 +46,14 @@ public class Ball : MonoBehaviour
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
     }
 
+    public virtual void LastBounceBehavior(Collision collision) {}
+
+    void OnLastBounce(Collision collision)
+    {
+        LastBounceBehavior(collision);
+        ReturnToSpot();
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         var collider = collision.collider;
@@ -54,12 +62,12 @@ public class Ball : MonoBehaviour
         {
             if (collider.CompareTag("Surface"))
             {
-            }
-            currentBounceCount += 1;
+                currentBounceCount += 1;
 
-            if (currentBounceCount == MaxBounceCount)
-            {
-                ReturnToSpot();
+                if (currentBounceCount == MaxBounceCount)
+                {
+                    OnLastBounce(collision);
+                }
             }
         }
     }
