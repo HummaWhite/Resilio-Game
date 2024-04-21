@@ -7,6 +7,8 @@ TagManager:
   - Ball
   - Surface
   - Container
+  - Anchor
+  - Boundary
   layers:
   - Default
   - TransparentFX

@@ -24,7 +24,6 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void OnPickup()
@@ -57,6 +56,11 @@ public class Ball : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         var collider = collision.collider;
+
+        if (collider.CompareTag("Boundary"))
+        {
+            ReturnToSpot();
+        }
 
         if (state == BallState.Thrown)
         {

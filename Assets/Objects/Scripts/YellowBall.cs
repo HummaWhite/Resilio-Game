@@ -13,7 +13,14 @@ public class YellowBall : Ball
         var normal = contact.normal;
         Physics.gravity = -normal * 9.8f;
         var xrOrigin = FindObjectOfType<XROrigin>();
-        xrOrigin.MoveCameraToWorldLocation(contact.point);
-        xrOrigin.MatchOriginUp(normal);
+
+        var vector = Vector3.Normalize(xrOrigin.transform.position - contact.point);
+        var forward = Vector3.Cross(normal, vector);
+
+        //xrOrigin.MoveCameraToWorldLocation(contact.point + normal * 1.36144f);
+        xrOrigin.transform.position = contact.point;
+
+        xrOrigin.MatchOriginUpCameraForward(normal, forward);
+        xrOrigin.MatchOriginUpOriginForward(normal, forward);
     }
 }
