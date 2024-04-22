@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallContainer : MonoBehaviour
 {
-    public GameObject objectToUnlock;
+    public Unlockable objectToUnlock;
 
     // Start is called before the first frame update
     void Start() {}
@@ -20,9 +20,9 @@ public class BallContainer : MonoBehaviour
         {
             var ball = collider.GetComponent<Ball>();
 
-            if (ball != null && ball.Type == BallType.Blue)
+            if (ball != null && ball.Type == BallType.Blue && objectToUnlock != null)
             {
-                //objectToUnlock.GetComponent<Unlockable>().Unlock();
+                objectToUnlock.Unlock();
                 Debug.Log("Hellow");
             }
         }

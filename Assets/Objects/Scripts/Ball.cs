@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
     public BallType Type;
 
     public int currentBounceCount = 0;
-    public GameObject pickupSpot;
+    public PickupSpot pickupSpot;
     public BallState state = BallState.InSpot;
 
     // Start is called before the first frame update
@@ -24,6 +24,10 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Magnitude(transform.position) > 100.0f)
+        {
+            ReturnToSpot();
+        }
     }
 
     public void OnPickup()
@@ -39,13 +43,13 @@ public class Ball : MonoBehaviour
 
     public void ReturnToSpot()
     {
-        transform.SetPositionAndRotation(pickupSpot.GetComponent<PickupSpot>().GetBallPickupPosition(), Quaternion.identity);
+        transform.SetPositionAndRotation(pickupSpot.GetBallPickupPosition(), Quaternion.identity);
         currentBounceCount = 0;
         state = BallState.InSpot;
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
     }
 
-    public virtual void LastBounceBehavior(Collision collision) {}
+    protected virtual void LastBounceBehavior(Collision collision) {}
 
     void OnLastBounce(Collision collision)
     {
@@ -61,10 +65,16 @@ public class Ball : MonoBehaviour
         {
             ReturnToSpot();
         }
-
-        if (state == BallState.Thrown)
+        else if (collider.CompareTag("PickupSpot"))
         {
-            if (collider.CompareTag("Surface"))
+            if (state == BallState.InSpot || state == BallState.Picked)
+            {
+                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+            }
+        }
+        else if (collider.CompareTag("Surface"))
+        {
+            if (state == BallState.Thrown)
             {
                 currentBounceCount += 1;
 

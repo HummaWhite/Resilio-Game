@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Door : Unlockable
 {
-    public override void UnlockBehavior()
+    protected override void UnlockBehavior()
     {
-        // TODO: unclock the door
+        gameObject.SetActive(false);
+    }
+
+    protected override void ResetBehavior()
+    {
+        gameObject.SetActive(true);
     }
 }

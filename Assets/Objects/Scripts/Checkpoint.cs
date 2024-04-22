@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static Global global;
+
     void Start()
     {
-        
+        global = FindObjectOfType<Global>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.collider.CompareTag("Player"))
+        {
+            global.checkpoint = this;
+        }
     }
 }
