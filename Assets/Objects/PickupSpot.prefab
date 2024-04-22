@@ -120,6 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BallType: 0
   YellowBallPrefab: {fileID: 6030418453511761892, guid: 3f771bb54c27966448ae5693a0e91bd1, type: 3}
-  WhiteBallPrefab: {fileID: 6030418453511761892, guid: e900c26ac6668474e883e6fcdba631c9, type: 3}
+  WhiteBallPrefab: {fileID: 6030418453511761892, guid: cd13474e89794d140806075c0c81ef8a, type: 3}
   BlueBallPrefab: {fileID: 6030418453511761892, guid: e900c26ac6668474e883e6fcdba631c9, type: 3}
   ball: {fileID: 0}

@@ -27,4 +27,20 @@ public class BallContainer : MonoBehaviour
             }
         }
     }
+
+    void OnCollisionExit(Collision collision)
+    {
+        var collider = collision.collider;
+
+        if (collider.CompareTag("Ball"))
+        {
+            var ball = collider.GetComponent<Ball>();
+
+            if (ball != null && ball.Type == BallType.Blue && objectToUnlock != null)
+            {
+                objectToUnlock.Reset();
+                Debug.Log("Byae");
+            }
+        }
+    }
 }

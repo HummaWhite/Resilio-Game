@@ -15,7 +15,7 @@ public class PickupSpot : MonoBehaviour
 
     public Vector3 GetBallPickupPosition()
     {
-        return transform.position + transform.up;
+        return transform.position + transform.up * 0.5f;
     }
 
     // Start is called before the first frame update
