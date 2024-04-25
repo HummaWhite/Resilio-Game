@@ -16,7 +16,7 @@ public class BallContainer : MonoBehaviour
     {
         var collider = collision.collider;
 
-        if (collider.CompareTag("Ball"))
+        if (collider.CompareTag(ValueShortcut.Tag_Ball))
         {
             var ball = collider.GetComponent<Ball>();
 
@@ -32,7 +32,7 @@ public class BallContainer : MonoBehaviour
     {
         var collider = collision.collider;
 
-        if (collider.CompareTag("Ball"))
+        if (collider.CompareTag(ValueShortcut.Tag_Ball))
         {
             var ball = collider.GetComponent<Ball>();
 

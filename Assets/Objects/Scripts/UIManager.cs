@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuScript : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -16,7 +16,7 @@ public class MainMenuScript : MonoBehaviour
     {
     }
 
-    public void JumpToGame() {
-        SceneManager.LoadScene(1);
+    public void LoadGameLevel() {
+        SceneManager.LoadScene(ValueShortcut.SceneName_Game);
     }
 }

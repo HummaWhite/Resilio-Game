@@ -13,7 +13,7 @@ public class Global : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown(ValueShortcut.InputName_Jump))
         {
             ResetToLastCheckpoint();
         }

@@ -13,7 +13,7 @@ public class Checkpoint : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag(ValueShortcut.Tag_Player))
         {
             global.checkpoint = this;
         }

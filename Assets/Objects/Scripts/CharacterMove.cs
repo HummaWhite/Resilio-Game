@@ -16,7 +16,7 @@ public class CharacterMove : MonoBehaviour
     {
         if (changeGravity)
         {
-            Physics.gravity = -normal * 9.8f;
+            Physics.gravity = -normal * GlobalSetting.GravityVal;
         }
 
         var vector = Vector3.Normalize(xrOrigin.transform.position - position);
