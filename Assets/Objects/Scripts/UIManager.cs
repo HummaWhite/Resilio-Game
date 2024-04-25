@@ -19,4 +19,9 @@ public class UIManager : MonoBehaviour
     public void LoadGameLevel() {
         SceneManager.LoadScene(ValueShortcut.SceneName_Game);
     }
+
+    public void QuitGame()
+    {
+       Application.Quit();
+    }
 }
