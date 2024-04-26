@@ -66,6 +66,8 @@ MonoBehaviour:
     locomotion.
   preview: {fileID: -7201468737772367373}
   dependencies:
+  - dependency: {fileID: 2481066621369606318, guid: 3b243dce76d6dec42b250912a6460fda, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 919132149155446097, guid: 11cd62256b1d470f922b2c8e6446cc77, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2100000, guid: a680fd38de16fc748841652a6751ebb6, type: 2}
