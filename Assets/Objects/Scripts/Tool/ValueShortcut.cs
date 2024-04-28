@@ -93,6 +93,7 @@ public static class ValueShortcut
     #region Scene Name Shortcuts
     public const string SceneName_Game = "Game";
     public const string SceneName_Menu = "Menu";
+    public const string SceneName_RJLevel = "RJLevel";
     #endregion
 
 }
