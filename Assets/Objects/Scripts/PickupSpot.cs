@@ -32,7 +32,7 @@ public class PickupSpot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(ValueShortcut.InputName_Jump))
+        if (Input.GetKeyDown("Jump"))
         {
             ball.ReturnToSpot();
         }

@@ -10,6 +10,8 @@ public class YellowBall : Ball
     protected override void LastBounceBehavior(Collision collision)
     {
         var contact = collision.contacts[0];
-        CharacterMove.Teleport(contact.point, contact.normal);
+        var position = contact.point;
+        position = collision.gameObject.transform.position;
+        CharacterMove.Teleport(position, contact.normal);
     }
 }
