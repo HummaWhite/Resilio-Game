@@ -49,7 +49,9 @@ public class Ball : MonoBehaviour
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
     }
 
-    protected virtual void LastBounceBehavior(Collision collision) {}
+    protected virtual void LastBounceBehavior(Collision collision)
+    {
+    }
 
     void OnLastBounce(Collision collision)
     {
