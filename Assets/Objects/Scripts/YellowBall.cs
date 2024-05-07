@@ -12,7 +12,8 @@ using UnityEngine.XR.OpenXR.Input;
 public class YellowBall : Ball
 {
     [SerializeField] float PlayerChooseTimeSlot = 3.0f;
-    [SerializeField] GameObject transferPosHint;
+    [SerializeField] GameObject TeleportHintObejct;
+
     GameObject _poshint;
     float _timer = 0;
     bool _startChooseTime = false;
@@ -39,16 +40,12 @@ public class YellowBall : Ball
     protected override void LastBounceBehavior(Collision collision)
     {
         var contact = collision.contacts[0];
-        //var position = contact.point;
+        var position = contact.point;
         //position = collision.gameObject.transform.position;
         //CharacterMove.Teleport(position, contact.normal);
         _startChooseTime = true;
-        _poshint = Instantiate(transferPosHint, transform.position, quaternion.identity);
-        if(_poshint == null) return;
-        _poshint.transform.parent = transform.parent;
+
+        _poshint = Instantiate(TeleportHintObejct, position, Quaternion.identity);
         _poshint.transform.up = contact.normal;
-        //transferPosHint = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Sphere), transform.position, Quaternion.identity);
-        //transferPosHint.transform.parent = transform.parent;
-        transferPosHint.transform.localScale = Vector3.one * 0.5f;
     }
 }

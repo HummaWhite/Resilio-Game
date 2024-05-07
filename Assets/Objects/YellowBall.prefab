@@ -554,8 +554,8 @@ MonoBehaviour:
   currentBounceCount: 0
   pickupSpot: {fileID: 0}
   state: 0
-  PlayerChooseTimeSlot: 1.5
-  transferPosHint: {fileID: 9126498203335999034, guid: 4a4deb0c4f94e93488d14df67cdd44a8, type: 3}
+  PlayerChooseTimeSlot: 3
+  TeleportHintObejct: {fileID: 6867193142998272275, guid: 3cbad695b3053e44092473559f6d5f14, type: 3}
 --- !u!1 &8125653387615606747
 GameObject:
   m_ObjectHideFlags: 0
