@@ -52,7 +52,6 @@ public class TeleportHint : MonoBehaviour {
             Destroy(hintPoint);
             Destroy(hintLine);
             Destroy(gameObject);
-            return;
         }
         UpdateHintObejcts();
         timer += Time.deltaTime;

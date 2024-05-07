@@ -23,13 +23,9 @@ public class YellowBall : Ball
             if(_timer > PlayerChooseTimeSlot) {
                 _startChooseTime = false;
                 _timer = 0;
-                if(_poshint != null) {
-                   Destroy(_poshint);
-                   _poshint = null;
-                }
             }
 
-            if(Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Joystick1Button1)){
+            if(Input.GetKeyDown(KeyCode.Joystick1Button15)) {
                 CharacterMove.Teleport(_poshint.transform.position + _poshint.transform.up.normalized * 0.3f, _poshint.transform.up);
             }
 
@@ -41,8 +37,6 @@ public class YellowBall : Ball
     {
         var contact = collision.contacts[0];
         var position = contact.point;
-        //position = collision.gameObject.transform.position;
-        //CharacterMove.Teleport(position, contact.normal);
         _startChooseTime = true;
 
         _poshint = Instantiate(TeleportHintObejct, position, Quaternion.identity);

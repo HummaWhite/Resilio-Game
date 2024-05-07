@@ -17,6 +17,14 @@ public class Global : MonoBehaviour
         {
             ResetToLastCheckpoint();
         }
+
+        /*
+        for (KeyCode i = KeyCode.Joystick1Button0; i <= KeyCode.Joystick1Button19; i++) {
+            if (Input.GetKeyDown(i)) {
+                Debug.Log(i);
+            }
+        }
+        */
     }
 
     public void ResetToLastCheckpoint()
