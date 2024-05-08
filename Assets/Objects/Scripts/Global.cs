@@ -29,6 +29,7 @@ public class Global : MonoBehaviour
 
     public void ResetToLastCheckpoint()
     {
+        Physics.gravity = checkpoint.gravity;
         CharacterMove.Teleport(checkpoint.transform.position, checkpoint.transform.up);
     }
 }

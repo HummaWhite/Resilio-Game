@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
+    public string levelName = "Menu";
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class NextLevel : MonoBehaviour
     void OnCollisionEnter(Collision collision){
         if(collision.collider.CompareTag("Player")){
             Physics.gravity = new Vector3(0,-9.8f,0);     
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene(levelName);
         }
     }
 }

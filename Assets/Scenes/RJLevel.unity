@@ -1005,7 +1005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &54048518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4326,7 +4326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3864c091fe2636498e4dbd833a27aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoint: {fileID: 0}
+  checkpoint: {fileID: 1230545921}
 --- !u!4 &515480825
 Transform:
   m_ObjectHideFlags: 0
@@ -8515,6 +8515,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 256962821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1001 &1230545920
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8712292
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461828049281342788, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216613130125473047, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+--- !u!114 &1230545921 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4256225020403887782, guid: 4418d5cb0799f0d4c95496d4b3d279da, type: 3}
+  m_PrefabInstance: {fileID: 1230545920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f477602aa49dbf4cbf9774855f983b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1244855751
 GameObject:
   m_ObjectHideFlags: 0
@@ -12235,6 +12303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efe501f8d067524f8518cc0ec2f2b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelName: RJLevel 2
 --- !u!1 &1677120770
 GameObject:
   m_ObjectHideFlags: 0
@@ -14875,3 +14944,4 @@ SceneRoots:
   - {fileID: 88770375}
   - {fileID: 45724853}
   - {fileID: 480655428}
+  - {fileID: 1230545920}

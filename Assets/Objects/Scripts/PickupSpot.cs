@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PickupSpot : MonoBehaviour
 {
@@ -13,9 +14,11 @@ public class PickupSpot : MonoBehaviour
     
     public Ball ball;
 
+    public float ballSize = 1.0f;
+
     public Vector3 GetBallPickupPosition()
     {
-        return transform.position + transform.up * 0.5f;
+        return transform.position + transform.up * 0.5f * ballSize * 0.05f;
     }
 
     // Start is called before the first frame update
@@ -23,6 +26,8 @@ public class PickupSpot : MonoBehaviour
     {
         GameObject[] prefabs = { YellowBallPrefab, WhiteBallPrefab, BlueBallPrefab };
         ball = Instantiate(prefabs[Convert.ToInt32(BallType)], GetBallPickupPosition(), Quaternion.identity).GetComponent<Ball>();
+        ballSize *= 20.0f;
+        ball.transform.localScale = new Vector3(ballSize,ballSize,ballSize);
         ball.pickupSpot = this;
         ball.ReturnToSpot();
 

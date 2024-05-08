@@ -27,16 +27,16 @@ public class LaserBeam : MonoBehaviour
         }
         else { 
             count++;
-            if (count % 2 == 0)
-            {
+            // if (count % 2 == 0)
+            // {
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                 gameObject.transform.position = originPos;
-            }
-            else
-            {
-                gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
-                gameObject.transform.position = verticalPos;
-            }
+            // }
+            // else
+            // {
+            //     gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
+            //     gameObject.transform.position = verticalPos;
+            // }
         }
         
     }

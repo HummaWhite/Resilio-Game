@@ -21,6 +21,12 @@ public class CharacterMove : MonoBehaviour
     }
     */
 
+    void Update(){
+        if(xrOrigin.transform.position.magnitude > 100){
+            Checkpoint.global.ResetToLastCheckpoint();
+        }
+    }
+
     public static void Teleport(Vector3 position, Vector3 normal, bool changeGravity = true)
     {
         if (changeGravity)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     public static Global global;
-
+    public Vector3 gravity;
     void Start()
     {
         global = FindObjectOfType<Global>();
@@ -16,6 +16,7 @@ public class Checkpoint : MonoBehaviour
         if (collision.collider.CompareTag(ValueShortcut.Tag_Player))
         {
             global.checkpoint = this;
+            gravity = Physics.gravity;
         }
     }
 }
