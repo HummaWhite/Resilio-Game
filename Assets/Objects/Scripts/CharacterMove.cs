@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -11,6 +12,14 @@ public class CharacterMove : MonoBehaviour
     {
         xrOrigin = FindObjectOfType<XROrigin>();
     }
+
+    /*
+    void OnCollisionEnter(Collision collision) {
+        if (collision.collider.CompareTag("NextLevel")) {
+            SceneManager.LoadScene("Main Menu");
+        }
+    }
+    */
 
     public static void Teleport(Vector3 position, Vector3 normal, bool changeGravity = true)
     {

@@ -32,7 +32,7 @@ public class PickupSpot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
             ball.ReturnToSpot();
         }

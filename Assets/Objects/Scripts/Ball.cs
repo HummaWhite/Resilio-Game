@@ -24,8 +24,10 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(transform.position);
         if (Vector3.Magnitude(transform.position) > 100.0f)
         {
+            Debug.Log("Returned");
             ReturnToSpot();
         }
     }
